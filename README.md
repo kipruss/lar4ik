@@ -29,3 +29,8 @@
 
     - create a directory `work/tmp`
     - run `gulp lint`
+
+### Branches:
+
+  - `master`: building of the page like this [p.w3layouts.com/demos/law/web/](https://p.w3layouts.com/demos/law/web/)
+  - `bootstrap`: building of the page like this [getbootstrap.com/examples/jumbotron/](http://getbootstrap.com/examples/jumbotron/)
