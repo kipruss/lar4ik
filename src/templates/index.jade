@@ -1,0 +1,17 @@
+doctype html
+html.no-js(lang='en')
+    include ./partials/head.jade
+    body
+        include ./partials/navbar.jade
+        include ./partials/jumbotron.jade
+        include ./partials/main.jade
+
+        script(src='js/vendor/jquery-1.12.3.min.js')
+        script(src='js/vendor/bootstrap.min.js')
+        script(src='js/main.js')
+
+        //- IE10 viewport hack for Surface/desktop Windows 8 bug
+        script(src='js/ie10-viewport-bug-workaround.js')
+
+        //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+        //- script(src='js/ga.js')
