@@ -1,0 +1,45 @@
+extends ./layout.jade
+
+block title
+    title Law a Society &amp; People Category Flat Bootstrap responsive Website Template | Contact :: w3layouts
+
+block menu
+    li
+        a(href='index.html') Home
+    li
+        a(href='practice.html') Practice
+    li
+        a(href='clients.html') Clients
+    li
+        a(href='resources.html') Resources
+    li
+        a(href='typo.html') Typo
+    li.active
+        a(href='contact.html') Contact
+
+block content
+    .contact
+        .container
+            .contact-top
+                h3 Contact Us
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla. Sed cursus ante dapibus diam. Sed nisi. Nulla.
+            .col-md-6.contact-lft
+                .map
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25090.351787808224!2d-122.2569291!3d38.179845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80850c726b66df5b%3A0xfaee3a3990d21c4c!2sAmerican+Canyon%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1413272890200')
+                h4 Address
+                address
+                    | 795 Folsom Ave, Suite 600
+                    br
+                    |               San Francisco, CA 94107
+                    br
+                    abbr(title='Phone') P :
+                    |    (123) 456-7890
+            .col-md-6.contact-bottom
+                form
+                    input(type='text', value='First Name', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'First Name';}")
+                    input(type='text', value='Last Name', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Last Name';}")
+                    input(type='text', value='Email Address', placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Email Address';}")
+                    textarea(placeholder='', onfocus="this.value='';", onblur="if (this.value == '') {this.value = 'Message';}") Message
+                    input(type='submit', value='Submit')
+            .clearfix

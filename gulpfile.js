@@ -36,6 +36,9 @@ gulp.task('styles', function() {
         //cached('styles'),
         gulpIf(isDevelopment, sourcemaps.init()),
         sass(),
+        gulpIf(!isDevelopment, revReplace({
+            manifest: gulp.src(manifest_dir + '/images.json', {allowEmpty: true})
+        })),
         /*autoprefixer({
             browsers: ['last 2 versions']
         }),*/
@@ -59,6 +62,17 @@ gulp.task('assets', function() {
     return gulp.src(src_dir + '/assets/**/*.*', {since: gulp.lastRun('assets')})
         .pipe(newer(build_dir))
         .pipe(gulp.dest(build_dir));
+});
+
+gulp.task('images', function() {
+    return combiner(
+        gulp.src(src_dir + '/images/**/*.*', {since: gulp.lastRun('images')}),
+        gulpIf(!isDevelopment, rev()),
+        remember('images'),
+        gulp.dest(build_dir + '/images'),
+        gulpIf(!isDevelopment, rev.manifest('images.json')),
+        gulpIf(!isDevelopment, gulp.dest(manifest_dir))
+    ).on('error', notify.onError());
 });
 
 gulp.task('js', function() {
@@ -89,16 +103,19 @@ gulp.task('templates', function() {
         .pipe(gulpIf(!isDevelopment, revReplace({
             manifest: gulp.src(manifest_dir + '/js.json', {allowEmpty: true})
         })))
+        .pipe(gulpIf(!isDevelopment, revReplace({
+            manifest: gulp.src(manifest_dir + '/images.json', {allowEmpty: true})
+        })))
         .pipe(remember('templates'))
         .pipe(gulp.dest(build_dir))
 });
 
 gulp.task('build', gulp.series(
     'clean',
-    gulp.parallel('styles', 'js', 'assets', 'templates'))
+    gulp.parallel('styles', 'js', 'images', 'assets', 'templates'))
 );
 
-gulp.task('buildproduction', gulp.series('clean', 'styles', 'js', 'assets', 'templates'));
+gulp.task('buildproduction', gulp.series('clean', 'images', 'styles', 'js', 'assets', 'templates'));
 
 gulp.task('watch', function() {
     gulp.watch(src_dir + '/styles/**/*.*', gulp.series('styles')).on('unlink', function(filepath) {
@@ -107,12 +124,13 @@ gulp.task('watch', function() {
     });
     gulp.watch(src_dir + '/js/**/*.*', gulp.series('js')).on('unlink', function(filepath) {
         remember.forget('js', path.resolve(filepath));
-        //delete cached.caches.js[path.resolve(filepath)];
+    });
+    gulp.watch(src_dir + '/images/**/*.*', gulp.series('images')).on('unlink', function(filepath) {
+        remember.forget('images', path.resolve(filepath));
     });
     gulp.watch(src_dir + '/assets/**/*.*', gulp.series('assets'));
     gulp.watch(src_dir + '/templates/**/*.*', gulp.series('templates')).on('unlink', function(filepath) {
         remember.forget('templates', path.resolve(filepath));
-        //delete cached.caches.templates[path.resolve(filepath)];
     });
 });
 

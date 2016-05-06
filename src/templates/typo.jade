@@ -1,0 +1,675 @@
+extends ./layout.jade
+
+block title
+    title Law a Society &amp; People Category Flat Bootstrap responsive Website Template | Typo :: w3layouts
+
+block menu
+    li
+        a(href='index.html') Home
+    li
+        a(href='practice.html') Practice
+    li
+        a(href='clients.html') Clients
+    li
+        a(href='resources.html') Resources
+    li.active
+        a(href='typo.html') Typo
+    li
+        a(href='contact.html') Contact
+
+block content
+    .typo
+        .container
+            h3.title Short Codes
+            .grid_3.grid_4
+                h3.hdg Headings
+                .bs-example
+                    table.table
+                        tbody
+                            tr
+                                td
+                                    h1(id='h1.-bootstrap-heading')
+                                        | h1. Bootstrap heading
+                                        a.anchorjs-link(href='#h1.-bootstrap-heading')
+                                            span.anchorjs-icon
+                                td.type-info Semibold 36px
+                            tr
+                                td
+                                    h2(id='h2.-bootstrap-heading')
+                                        | h2. Bootstrap heading
+                                        a.anchorjs-link(href='#h2.-bootstrap-heading')
+                                            span.anchorjs-icon
+                                td.type-info Semibold 30px
+                            tr
+                                td
+                                    h3(id='h3.-bootstrap-heading')
+                                        | h3. Bootstrap heading
+                                        a.anchorjs-link(href='#h3.-bootstrap-heading')
+                                            span.anchorjs-icon
+                                td.type-info Semibold 24px
+                            tr
+                                td
+                                    h4(id='h4.-bootstrap-heading')
+                                        | h4. Bootstrap heading
+                                        a.anchorjs-link(href='#h4.-bootstrap-heading')
+                                            span.anchorjs-icon
+                                td.type-info Semibold 18px
+                            tr
+                                td
+                                    h5(id='h5.-bootstrap-heading')
+                                        | h5. Bootstrap heading
+                                        a.anchorjs-link(href='#h5.-bootstrap-heading')
+                                            span.anchorjs-icon
+                                td.type-info Semibold 14px
+                            tr
+                                td
+                                    h6 h6. Bootstrap heading
+                                td.type-info Semibold 12px
+            .grid_3.grid_5
+                h3 Buttons
+                h1
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+                h2
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+                h3
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+                h4
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+                h5
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+                h6
+                    a(href='#')
+                        span.label.label-default Default
+                    a(href='#')
+                        span.label.label-primary Primary
+                    a(href='#')
+                        span.label.label-success Success
+                    a(href='#')
+                        span.label.label-info Info
+                    a(href='#')
+                        span.label.label-warning Warning
+                    a(href='#')
+                        span.label.label-danger Danger
+            .grid_3.grid_5
+                h3 Progress Bars
+                .tab-content
+                    #domprogress.tab-pane.active
+                        .progress
+                            .progress-bar.progress-bar-primary(style='width: 20%')
+                        p
+                            | Info with 
+                            code progress-bar-info
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-info(style='width: 60%')
+                        p
+                            | Success with 
+                            code progress-bar-success
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-success(style='width: 30%')
+                        p
+                            | Warning with 
+                            code progress-bar-warning
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-warning(style='width: 70%')
+                        p
+                            | Danger with 
+                            code progress-bar-danger
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-danger(style='width: 50%')
+                        p
+                            | Inverse with 
+                            code progress-bar-inverse
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-inverse(style='width: 40%')
+                        p
+                            | Inverse with 
+                            code progress-bar-inverse
+                            |    class.
+                        .progress
+                            .progress-bar.progress-bar-success(style='width: 35%')
+                                span.sr-only 35% Complete (success)
+                            .progress-bar.progress-bar-warning(style='width: 20%')
+                                span.sr-only 20% Complete (warning)
+                            .progress-bar.progress-bar-danger(style='width: 10%')
+                                span.sr-only 10% Complete (danger)
+            .grid_3.grid_5
+                h3 Alerts
+                .alert.alert-success(role='alert')
+                    strong Well done!
+                    |    You successfully read this important alert message.
+                .alert.alert-info(role='alert')
+                    strong Heads up!
+                    |    This alert needs your attention, but it's not super important.
+                .alert.alert-warning(role='alert')
+                    strong Warning!
+                    |    Best check yo self, you're not looking too good.
+                .alert.alert-danger(role='alert')
+                    strong Oh snap!
+                    |    Change a few things up and try submitting again.
+            .grid_3.grid_5
+                h3 Pagination
+                .col-md-6
+                    nav
+                        ul.pagination.pagination-lg
+                            li
+                                a(href='#', aria-label='Previous')
+                                    span(aria-hidden='true') «
+                            li
+                                a(href='#') 1
+                            li
+                                a(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') 4
+                            li
+                                a(href='#') 5
+                            li
+                                a(href='#', aria-label='Next')
+                                    span(aria-hidden='true') »
+                    nav
+                        ul.pagination
+                            li
+                                a(href='#', aria-label='Previous')
+                                    span(aria-hidden='true') «
+                            li
+                                a(href='#') 1
+                            li
+                                a(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') 4
+                            li
+                                a(href='#') 5
+                            li
+                                a(href='#', aria-label='Next')
+                                    span(aria-hidden='true') »
+                    nav
+                        ul.pagination.pagination-sm
+                            li
+                                a(href='#', aria-label='Previous')
+                                    span(aria-hidden='true') «
+                            li
+                                a(href='#') 1
+                            li
+                                a(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') 4
+                            li
+                                a(href='#') 5
+                            li
+                                a(href='#', aria-label='Next')
+                                    span(aria-hidden='true') »
+                .col-md-6
+                    ul.pagination.pagination-lg
+                        li.disabled
+                            a(href='#')
+                                i.fa.fa-angle-left «
+                        li.active
+                            a(href='#') 1
+                        li
+                            a(href='#') 2
+                        li
+                            a(href='#') 3
+                        li
+                            a(href='#') 4
+                        li
+                            a(href='#') 5
+                        li
+                            a(href='#')
+                                i.fa.fa-angle-right »
+                    nav
+                        ul.pagination
+                            li.disabled
+                                a(href='#', aria-label='Previous')
+                                    span(aria-hidden='true') «
+                            li.active
+                                a(href='#')
+                                    | 1 
+                                    span.sr-only (current)
+                            li
+                                a(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') 4
+                            li
+                                a(href='#') 5
+                            li
+                                a(href='#', aria-label='Next')
+                                    span(aria-hidden='true') »
+                    ul.pagination.pagination-sm
+                        li.disabled
+                            a(href='#')
+                                i.fa.fa-angle-left «
+                        li.active
+                            a(href='#') 1
+                        li
+                            a(href='#') 2
+                        li
+                            a(href='#') 3
+                        li
+                            a(href='#') 4
+                        li
+                            a(href='#') 5
+                        li
+                            a(href='#')
+                                i.fa.fa-angle-right »
+                .clearfix    
+            .grid_3.grid_5
+                h3 Breadcrumbs
+                ol.breadcrumb
+                    li.active Home
+                ol.breadcrumb
+                    li
+                        a(href='#') Home
+                    li.active Library
+                ol.breadcrumb
+                    li
+                        a(href='#') Home
+                    li
+                        a(href='#') Library
+                    li.active Data
+            .grid_3.grid_5
+                h3 Badges
+                .col-md-6
+                    p Add modifier classes to change the appearance of a badge.
+                    table.table.table-bordered
+                        thead
+                            tr
+                                th Classes
+                                th Badges
+                        tbody
+                            tr
+                                td No modifiers
+                                td
+                                    span.badge 42
+                            tr
+                                td
+                                    code .badge-primary
+                                td
+                                    span.badge.badge-primary 1
+                            tr
+                                td
+                                    code .badge-success
+                                td
+                                    span.badge.badge-success 22
+                            tr
+                                td
+                                    code .badge-info
+                                td
+                                    span.badge.badge-info 30
+                            tr
+                                td
+                                    code .badge-warning
+                                td
+                                    span.badge.badge-warning 412
+                            tr
+                                td
+                                    code .badge-danger
+                                td
+                                    span.badge.badge-danger 999
+                .col-md-6
+                    p
+                        | Easily highlight new or unread items with the 
+                        code .badge
+                        |    class
+                    .list-group.list-group-alternate
+                        a.list-group-item(href='#')
+                            span.badge 201
+                            i.ti.ti-email
+                            |    Inbox
+                        a.list-group-item(href='#')
+                            span.badge.badge-primary 5021
+                            i.ti.ti-eye
+                            |    Profile visits
+                        a.list-group-item(href='#')
+                            span.badge 14
+                            i.ti.ti-headphone-alt
+                            |    Call
+                        a.list-group-item(href='#')
+                            span.badge 20
+                            i.ti.ti-comments
+                            |    Messages
+                        a.list-group-item(href='#')
+                            span.badge.badge-warning 14
+                            i.ti.ti-bookmark
+                            |    Bookmarks
+                        a.list-group-item(href='#')
+                            span.badge.badge-danger 30
+                            i.ti.ti-bell
+                            |    Notifications
+                .clearfix    
+            .grid_3.grid_5
+                h3 Wells
+                .well
+                    | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                .well
+                    | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+                .well
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            .grid_3.grid_5
+                h3.bars Tabs
+                .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+                    ul#myTab.nav.nav-tabs(role='tablist')
+                        li.active(role='presentation')
+                            a#home-tab(href='#home', role='tab', data-toggle='tab', aria-controls='home', aria-expanded='true') Home
+                        li(role='presentation')
+                            a#profile-tab(href='#profile', role='tab', data-toggle='tab', aria-controls='profile') Profile
+                        li.dropdown(role='presentation')
+                            a#myTabDrop1.dropdown-toggle(href='#', data-toggle='dropdown', aria-controls='myTabDrop1-contents')
+                                | Dropdown 
+                                span.caret
+                            ul#myTabDrop1-contents.dropdown-menu(role='menu', aria-labelledby='myTabDrop1')
+                                li
+                                    a#dropdown1-tab(href='#dropdown1', tabindex='-1', role='tab', data-toggle='tab', aria-controls='dropdown1') @fat
+                                li
+                                    a#dropdown2-tab(href='#dropdown2', tabindex='-1', role='tab', data-toggle='tab', aria-controls='dropdown2') @mdo
+                    #myTabContent.tab-content
+                        #home.tab-pane.fade.in.active(role='tabpanel', aria-labelledby='home-tab')
+                            p
+                                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                        #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+                            p
+                                | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                        #dropdown1.tab-pane.fade(role='tabpanel', aria-labelledby='dropdown1-tab')
+                            p
+                                | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                        #dropdown2.tab-pane.fade(role='tabpanel', aria-labelledby='dropdown2-tab')
+                            p
+                                | Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.
+            h3.bars Unordered List
+            ul.list-group
+                li.list-group-item Cras justo odio
+                li.list-group-item Dapibus ac facilisis in
+                li.list-group-item Morbi leo risus
+                li.list-group-item Porta ac consectetur ac
+                li.list-group-item Vestibulum at eros
+            h3.bars Ordered List
+            ol
+                li.list-group-item1 Cras justo odio
+                li.list-group-item1 Dapibus ac facilisis in
+                li.list-group-item1 Morbi leo risus
+                li.list-group-item1 Porta ac consectetur ac
+                li.list-group-item1 Vestibulum at eros
+            h3.bars Forms
+            .input-group
+                span#basic-addon1.input-group-addon @
+                input.form-control(type='text', placeholder='Username', aria-describedby='basic-addon1')
+            .input-group
+                input.form-control(type='text', placeholder="Recipient's username", aria-describedby='basic-addon2')
+                span#basic-addon2.input-group-addon @example.com
+            .input-group
+                span.input-group-addon $
+                input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+                span.input-group-addon .00
+            .input-group.input-group-lg
+                span#sizing-addon1.input-group-addon @
+                input.form-control(type='text', placeholder='Username', aria-describedby='sizing-addon1')
+            .input-group
+                span#sizing-addon2.input-group-addon @
+                input.form-control(type='text', placeholder='Username', aria-describedby='sizing-addon2')
+            .input-group.input-group-sm
+                span#sizing-addon3.input-group-addon @
+                input.form-control(type='text', placeholder='Username', aria-describedby='sizing-addon3')
+            .row
+                .col-lg-6.in-gp-tl
+                    .input-group
+                        span.input-group-addon
+                            input(type='checkbox', aria-label='...')
+                        input.form-control(type='text', aria-label='...')
+                    // /input-group
+                // /.col-lg-6
+                .col-lg-6.in-gp-tb
+                    .input-group
+                        span.input-group-addon
+                            input(type='radio', aria-label='...')
+                        input.form-control(type='text', aria-label='...')
+                    // /input-group
+                // /.col-lg-6
+            // /.row
+            .row
+                .col-lg-6.in-gp-tl
+                    .input-group
+                        span.input-group-btn
+                            button.btn.btn-default(type='button') Go!
+                        input.form-control(type='text', placeholder='Search for...')
+                    // /input-group
+                // /.col-lg-6
+                .col-lg-6.in-gp-tb
+                    .input-group
+                        input.form-control(type='text', placeholder='Search for...')
+                        span.input-group-btn
+                            button.btn.btn-default(type='button') Go!
+                    // /input-group
+                // /.col-lg-6
+            // /.row
+            .row
+                .col-lg-6.in-gp-tl
+                    .input-group
+                        .input-group-btn
+                            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                | Action 
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href='#') Action
+                                li
+                                    a(href='#') Another action
+                                li
+                                    a(href='#') Something else here
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Separated link
+                        // /btn-group
+                        input.form-control(type='text', aria-label='...')
+                    // /input-group
+                // /.col-lg-6
+                .col-lg-6.in-gp-tb
+                    .input-group
+                        input.form-control(type='text', aria-label='...')
+                        .input-group-btn
+                            button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                | Action 
+                                span.caret
+                            ul.dropdown-menu.dropdown-menu-right
+                                li
+                                    a(href='#') Action
+                                li
+                                    a(href='#') Another action
+                                li
+                                    a(href='#') Something else here
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Separated link
+                        // /btn-group
+                    // /input-group
+                // /.col-lg-6
+            // /.row
+            .page-header
+                h3.bars Tables
+            h2.typoh2 Default styles
+            p
+                | For basic stylinglight padding and only horizontal add the base class 
+                code .table
+                |    to any 
+                code <table>
+                | .
+            .bs-docs-example
+                table.table
+                    thead
+                        tr
+                            th #
+                            th First Name
+                            th Last Name
+                            th Username
+                    tbody
+                        tr
+                            td 1
+                            td Mark
+                            td Otto
+                            td @mdo
+                        tr
+                            td 2
+                            td Jacob
+                            td Thornton
+                            td @fat
+                        tr
+                            td 3
+                            td Larry
+                            td the Bird
+                            td @twitter
+            hr.bs-docs-separator
+            p
+                | Add any of the following classes to the 
+                code .table
+                |    base class.
+            p
+                | Adds zebra-striping to any table row within the 
+                code <tbody>
+                |    via the 
+                code :nth-child
+                |    CSS selector (not available in IE7-8).
+            .bs-docs-example
+                table.table.table-striped
+                    thead
+                        tr
+                            th #
+                            th First Name
+                            th Last Name
+                            th Username
+                    tbody
+                        tr
+                            td 1
+                            td Mark
+                            td Otto
+                            td @mdo
+                        tr
+                            td 2
+                            td Jacob
+                            td Thornton
+                            td @fat
+                        tr
+                            td 3
+                            td Larry
+                            td the Bird
+                            td @twitter
+            p Add borders and rounded corners to the table.
+            .bs-docs-example
+                table.table.table-bordered
+                    thead
+                        tr
+                            th #
+                            th First Name
+                            th Last Name
+                            th Username
+                    tbody
+                        tr
+                            td(rowspan='2') 1
+                            td Mark
+                            td Otto
+                            td @mdo
+                        tr
+                            td Mark
+                            td Otto
+                            td @getbootstrap
+                        tr
+                            td 2
+                            td Jacob
+                            td Thornton
+                            td @fat
+                        tr
+                            td 3
+                            td(colspan='2') Larry the Bird
+                            td @twitter
+            p
+                | Enable a hover state on table rows within a 
+                code <tbody>
+                | .
+            .bs-docs-example
+                table.table.table-hover
+                    thead
+                        tr
+                            th #
+                            th First Name
+                            th Last Name
+                            th Username
+                    tbody
+                        tr
+                            td 1
+                            td Mark
+                            td Otto
+                            td @mdo
+                        tr
+                            td 2
+                            td Jacob
+                            td Thornton
+                            td @fat
+                        tr
+                            td 3
+                            td(colspan='2') Larry the Bird
+                            td @twitter
+

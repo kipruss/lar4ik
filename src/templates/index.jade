@@ -1,17 +1,148 @@
-doctype html
-html.no-js(lang='en')
-    include ./partials/head.jade
-    body
-        include ./partials/navbar.jade
-        include ./partials/jumbotron.jade
-        include ./partials/main.jade
+extends ./layout.jade
 
-        script(src='js/vendor/jquery-1.12.3.min.js')
-        script(src='js/vendor/bootstrap.min.js')
-        script(src='js/main.js')
+block title
+    title Law a Society &amp; People Category Flat Bootstrap responsive Website Template | Home :: w3layouts
 
-        //- IE10 viewport hack for Surface/desktop Windows 8 bug
-        script(src='js/ie10-viewport-bug-workaround.js')
+block scripts
+    script(defer='', src='js/vendor/jquery.flexslider.js')
+    script(type='text/javascript').
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: 'slide',
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
 
-        //- Google Analytics: change UA-XXXXX-X to be your site's ID.
-        //- script(src='js/ga.js')
+block menu
+    li.active
+        a(href='index.html') Home
+    li
+        a(href='practice.html') Practice
+    li
+        a(href='clients.html') Clients
+    li
+        a(href='resources.html') Resources
+    li
+        a(href='typo.html') Typo
+    li
+        a(href='contact.html') Contact
+
+block banner
+    // banner-starts
+    .banner
+        .container
+            .banner-top
+                section.slider
+                    .flexslider
+                        ul.slides
+                            li
+                                .banner-text
+                                    h2 “WE OFFER OUR CLIENTS AN EXPERT LEGAL ADVICE!”
+                                    p
+                                        | Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English
+                                    a.hvr-shutter-in-horizontal(href='#') Read More
+                            li
+                                .banner-text
+                                    h2 “CLIENTS AN EXPERT WE OFFER OUR  LEGAL ADVICE!”
+                                    p
+                                        | Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English
+                                    a.hvr-shutter-in-horizontal(href='#') Read More
+                            li
+                                .banner-text
+                                    h2 “AN EXPERT LEGAL WE OFFER OUR CLIENTS  ADVICE!”
+                                    p
+                                        | Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English
+                                    a.hvr-shutter-in-horizontal(href='#') Read More
+    // banner-end
+
+block content
+    // welcome
+    .welcome
+        .container
+            .col-md-8.welcome-left
+                h3 Welcome
+                .col-md-6.wel-lft
+                    img.img-responsive(src='images/20.jpg', alt=' ')
+                .col-md-6.wel-rgt
+                    p
+                        | Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+                    p
+                        | Will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+                    a.hvr-shutter-in-horizontal(href='#') Read More
+                .clearfix
+            .col-md-4.welcome-right
+                h3 Areas Of Practice
+                ul
+                    li
+                        a(href='#')
+                            span
+                            | Social Security Law
+                    li
+                        a(href='#')
+                            span
+                            | Real Property Law
+                    li
+                        a(href='#')
+                            span
+                            | Criminal Law
+                    li
+                        a(href='#')
+                            span
+                            | intellectual property
+                    li
+                        a(href='#')
+                            span
+                            | Serious Personal Injury Cases
+                    li
+                        a(href='#')
+                            span
+                            | Immigration Law
+            .clearfix
+    // welcome
+    // cases
+    .cases
+        .container
+            .col-md-4.cases-left
+                h3 Experience
+                img.img-responsive(src='images/11.jpg', alt=' ')
+                p
+                    | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                a.hvr-shutter-in-horizontal(href='#') Read More
+            .col-md-4.cases-left
+                h3 Resources
+                img.img-responsive(src='images/9.jpg', alt=' ')
+                p
+                    | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                a.hvr-shutter-in-horizontal(href='#') Read More
+            .col-md-4.cases-left
+                h3 Cases
+                img.img-responsive(src='images/6.jpg', alt=' ')
+                p
+                    | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                a.hvr-shutter-in-horizontal(href='#') Read More
+            .clearfix
+    // cases-end
+    // news
+    .news
+        .container
+            h3 News & Events
+            .col-md-6.news-left
+                .col-md-6.new-lft
+                    img.img-responsive(src='images/10.jpg', alt=' ')
+                .col-md-6.new-rgt
+                    h5    [10-08-2015]
+                    p
+                        | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                .clearfix
+            .col-md-6.news-left
+                .col-md-6.new-lft
+                    img.img-responsive(src='images/7.jpg', alt=' ')
+                .col-md-6.new-rgt
+                    h5    [10-08-2015]
+                    p
+                        | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                .clearfix
+            .clearfix
+    // news-end

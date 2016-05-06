@@ -1,0 +1,29 @@
+//
+    A Design by W3layouts
+    Author: W3layout
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+doctype html
+html.no-js(lang='en')
+    include ./partials/head.jade
+    body
+        include ./partials/top.jade
+        include ./partials/header.jade
+
+        block banner
+            .banner-1
+        block content
+
+        include ./partials/footer.jade
+
+        script(src='js/vendor/jquery-1.12.3.min.js')
+        script(src='js/vendor/bootstrap.min.js')
+        block scripts
+        script(src='js/main.js')
+
+        //- IE10 viewport hack for Surface/desktop Windows 8 bug
+        script(src='js/ie10-viewport-bug-workaround.js')
+
+        //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+        //- script(src='js/ga.js')
