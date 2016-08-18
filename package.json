@@ -1,7 +1,7 @@
 {
   "name": "easymatch",
   "version": "1.0.0",
-  "description": "EasyMatch",
+  "description": "lar4ik",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
