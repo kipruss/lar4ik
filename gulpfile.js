@@ -11,7 +11,6 @@ const newer = require('gulp-newer');  // gulp-changed
 //const concat = require('gulp-concat');
 //const autoprefixer = require('gulp-autoprefixer');
 const remember = require('gulp-remember');
-//const cached = require('gulp-cached');
 const path = require('path');
 const browserSync = require('browser-sync').create();
 const notify = require('gulp-notify');
@@ -20,7 +19,6 @@ const uglify = require('gulp-uglify');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const combiner = require('stream-combiner2').obj;
-const eslint = require('gulp-eslint');
 const through2 = require('through2').obj;
 const fs = require('fs');
 
@@ -33,7 +31,6 @@ const manifest_dir = './manifest';
 gulp.task('styles', function() {
     return combiner(
         gulp.src(src_dir + '/styles/styles.scss'/*, {since: gulp.lastRun('styles')}*/),
-        //cached('styles'),
         gulpIf(isDevelopment, sourcemaps.init()),
         sass(),
         gulpIf(!isDevelopment, revReplace({
@@ -92,7 +89,6 @@ gulp.task('templates', function() {
     let YOUR_LOCALS = {};
  
     return gulp.src(src_dir + '/templates/*.jade')
-        //.pipe(cached('templates'))
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: isDevelopment
@@ -120,7 +116,6 @@ gulp.task('buildproduction', gulp.series('clean', 'images', 'styles', 'js', 'ass
 gulp.task('watch', function() {
     gulp.watch(src_dir + '/styles/**/*.*', gulp.series('styles')).on('unlink', function(filepath) {
         remember.forget('styles', path.resolve(filepath));
-        //delete cached.caches.styles[path.resolve(filepath)];
     });
     gulp.watch(src_dir + '/js/**/*.*', gulp.series('js')).on('unlink', function(filepath) {
         remember.forget('js', path.resolve(filepath));
@@ -145,47 +140,3 @@ gulp.task('serve', function() {
 gulp.task('dev',
     gulp.series('build', gulp.parallel('watch', 'serve'))
 );
-
-gulp.task('lint-old', function() {
-  return gulp.src('src/js/**/*.*')
-      .pipe(eslint())
-      .pipe(eslint.failAfterError());
-});
-
-gulp.task('lint', function() {
-    let eslintResults = {};
-    let cacheFilePath = process.cwd() + '/work/tmp/lintCache.json';
-
-    try {
-        eslintResults = JSON.parse(fs.readFileSync(cacheFilePath));
-    } catch (e) {}
-
-    return gulp.src('src/js/**/*.*', {read: false})
-        .pipe(gulpIf(
-            function(file) {
-                return eslintResults[file.path] && eslintResults[file.path].mtime == file.stat.mtime.toJSON();
-            },
-            through2(function(file, enc, callback) {
-                file.eslint = eslintResults[file.path].eslint;
-                callback(null, file);
-            }),
-            combiner(
-                through2(function(file, enc, callback) {
-                    file.contents = fs.readFileSync(file.path);
-                    callback(null, file);
-                }),
-                eslint(),
-                through2(function(file, enc, callback) {
-                    eslintResults[file.path] = {
-                        eslint: file.eslint,
-                        mtime: file.stat.mtime
-                    };
-                    callback(null, file);
-                })
-            )
-        ))
-        .on('end', function() {
-            fs.writeFileSync(cacheFilePath, JSON.stringify((eslintResults)));
-        })
-        .pipe(eslint.failAfterError());
-});
