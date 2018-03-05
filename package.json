@@ -4,7 +4,9 @@
   "description": "lar4ik",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev",
+    "build": "gulp build",
+    "prod": "NODE_ENV=production gulp buildproduction"
   },
   "author": "MWS",
   "license": "",
