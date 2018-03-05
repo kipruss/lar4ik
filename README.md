@@ -8,8 +8,7 @@
 
   2. Install latest _gulp_ version:
 
-You can install it locally: `npm install gulp@next` and add string in your `.bashrc` or launch in console: `export PATH="./node_modules/.bin:$PATH"`
-Or install it globally: `npm install -g gulp@next`
+You can install it locally: `npm install gulp@next` and add string in your `.bashrc` or launch in console: `export PATH="./node_modules/.bin:$PATH"` or install it globally: `npm install -g gulp@next`
 
   4. Install all packages: `npm install`
 
