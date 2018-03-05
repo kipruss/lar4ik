@@ -6,25 +6,12 @@
     - Install a little helper called 'n': `sudo npm install -g n`
     - Install latest stable _NodeJS_ version: `sudo n stable`. Alternatively pick a specific version and install like this: `sudo n 8.9.4`
 
-  2. Install latest _gulp_ version
+  2. Install latest _gulp_ version:
 
-    You can install it locally:
+    You can install it locally: `npm install gulp@next`
+    and add string in your `.bashrc` or launch in console: `export PATH="./node_modules/.bin:$PATH"`
 
-    ```bash
-    npm install gulp@next
-    ```
-
-    and add string in your `.bashrc` or launch in console:
-
-    ```bash
-    export PATH="./node_modules/.bin:$PATH"
-    ```
-
-    Or install latest _gulp_ version globally
-
-    ```bash
-    npm install -g gulp@next
-    ```
+    Or install it globally: `npm install -g gulp@next`
 
   4. Install all packages: `npm install`
 
